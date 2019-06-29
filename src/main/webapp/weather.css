@@ -1,6 +1,11 @@
 
 body {
-  background-color: #ccebff;
+	background: url(bg.jpg);
+	color:#fff !important;
+}
+
+body a{
+		color:#fff !important;
 }
 
 label {
@@ -9,23 +14,20 @@ label {
   padding-left: 10px;
 }
 
-h1 {
-  background-color: #4db8ff;
-  text-align: center;
-}
-
 #frame {
   display: grid;
   grid-template-columns: 1fr, 1fr;
   /* grid-template-rows: 1fr 1fr; */
 }
 
+#myLocation, #weatherInfo, #inloggen, #toevoegen, ##countryList {
+	background-color: #ffffff4f;
+}
 
 #myLocation {
   grid-column: 1;
   /* grid-row:1; */
   padding-bottom: 10px;
-  background-color: #99d6ff;
   min-width: 300px;
   width: auto;
   margin-right: 5px;
@@ -36,7 +38,6 @@ h1 {
   grid-column: 2;
   /* grid-row: 1; */
   padding-bottom: 10px;
-  background-color: #99d6ff;
   width: auto;
   min-width: 300px;
   max-height: 400px;
@@ -50,7 +51,6 @@ h1 {
   width: auto;
   height: auto;
   border: 1px, solid, black;
-  background: #80ccff;
   padding-bottom: 10px;
 }
 
@@ -90,7 +90,6 @@ td {
 #toevoegen {
   margin-top: 10px;
   margin-right: 5px;
-  background-color: #99d6ff;
   min-width: 300px;
   width: auto;
 }
@@ -109,7 +108,6 @@ td {
   float: right;
   margin-top: 10px;
   margin-left: 5px;
-  background-color: #99d6ff;
 }
 
 #inloggen input, span {
@@ -123,15 +121,17 @@ td {
 /*modal*/
 #modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    
+    position: fixed;
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    max-height: 312px;
+    margin: 5% auto;
     left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-left: 20px;
+    right: 0;
+    overflow: auto;
+	background-color: #ffffffb0;
+    padding: 10px;
 }

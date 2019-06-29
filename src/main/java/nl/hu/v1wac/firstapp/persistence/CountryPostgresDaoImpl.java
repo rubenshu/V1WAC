@@ -22,22 +22,12 @@ public class CountryPostgresDaoImpl extends PostgresBaseDao implements CountryDa
 	        String code = dbResultSet.getString("code");
 	        String iso3 = dbResultSet.getString("iso3");
 	        String name = dbResultSet.getString("name");
-	        String continent = dbResultSet.getString("continent");
+	        String capital = dbResultSet.getString("capital");
 	        String region = dbResultSet.getString("region");
 	        double surfaceArea = dbResultSet.getDouble("surfacearea");
-	        int indepyear = dbResultSet.getInt("indepyear");
 	        int population = dbResultSet.getInt("population");
-	        double lifeExpectancy = dbResultSet.getDouble("lifeexpectancy");
-	        double gnp = dbResultSet.getDouble("population");
-	        double gnpold = dbResultSet.getDouble("gnpold");
-	        String localName = dbResultSet.getString("localname");
-	        String gov = dbResultSet.getString("governmentform");
-	        String headOfState = dbResultSet.getString("headofstate");
-	        double latitude = dbResultSet.getDouble("latitude");
-	        double longitude = dbResultSet.getDouble("longitude");
-	        String capital = dbResultSet.getString("capital");
 	        
-	        Country newCountry = new Country(code, iso3, name, capital, continent, region, surfaceArea, population, gov, latitude, longitude);
+	        Country newCountry = new Country(code, iso3, name, capital, region, surfaceArea, population);
 	        results.add(newCountry);
 	      }
 	    } catch (SQLException sqle) { 

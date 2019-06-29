@@ -174,7 +174,7 @@ function loadCountries() {
             console.log("Country not found!");}
             else if(response.status == 401 || response.status == 403) {
               console.log("unauthorized: 401/403 Fout!");
-              alert("u bent niet ingelogd \nTest account:\nusername: e\nwachtwoord: e");
+              alert("u bent niet ingelogd \nTest account:\nusername: user\nwachtwoord: user");
             }
             else {console.log("Cannot delete Country!");}
     });
@@ -212,7 +212,7 @@ function submit(){
   .then(function(myJson) { console.log(myJson); })
   .catch(function(exception){
     console.log(exception);
-    alert("u bent niet ingelogd \nTest account:\nusername: e\nwachtwoord: e");
+    alert("u bent niet ingelogd \nTest account:\nusername: user\nwachtwoord: user");
   });
   document.querySelector("#landen").innerHTML = "";
   loadCountries();
@@ -241,7 +241,7 @@ function voegToe(){
         loadCountries();
       } else {
         console.log("Toevoegen niet gelukt!");
-        alert("u bent niet ingelogd \nTest account:\nusername: e\nwachtwoord: e");
+        alert("u bent niet ingelogd \nTest account:\nusername: user\nwachtwoord: user");
       }
     })
 }

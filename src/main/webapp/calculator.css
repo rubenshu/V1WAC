@@ -17,3 +17,11 @@ height: 3.5em;
 margin-bottom: 0.3em;
 width: 3.5em;
 }
+body {
+	background: url(bg.jpg);
+	color:#fff !important;
+}
+
+body a{
+		color:#fff !important;
+}

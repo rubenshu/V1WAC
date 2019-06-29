@@ -34,13 +34,9 @@ public class WorldResource {
 			job.add("Iso3", c.getIso3());
 			job.add("Name", c.getName());
 			job.add("Capital", c.getCapital());
-			job.add("Continent", c.getContinent());
 			job.add("Region", c.getRegion());
 			job.add("Surface", c.getSurface());
 			job.add("Population", c.getPopulation());
-			job.add("Government", c.getGovernment());
-			job.add("Latitude", c.getLatitude());
-			job.add("Longitude", c.getLongitude());
 			
 			jab.add(job);
 		}
@@ -87,13 +83,9 @@ public class WorldResource {
 			job.add("Iso3", c.getIso3());
 			job.add("Name", c.getName());
 			job.add("Capital", c.getCapital());
-			job.add("Continent", c.getContinent());
 			job.add("Region", c.getRegion());
 			job.add("Surface", c.getSurface());
 			job.add("Population", c.getPopulation());
-			job.add("Government", c.getGovernment());
-			job.add("Latitude", c.getLatitude());
-			job.add("Longitude", c.getLongitude());
 		
 		return job.build().toString();
 	}
