@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Weather api</title>
+   <link rel="stylesheet" type="text/css" href="weather.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <div id="frame">
+    <div id="myLocation">
+      <h1>Mijn locatie</h1>
+
+      <label>Landcode: </label>
+      <span id="landcode"></span></br>
+
+      <label>Land: </label>
+      <span id="land"></span></br>
+
+      <label >Regio: </label>
+      <span id="regio"></span></br>
+
+      <label>Stad: </label>
+      <span id="stad"></span></br>
+
+      <label>Postcode: </label>
+      <span id="postcode"></span></br>
+
+      <label>Latitude: </label>
+      <span id="latitude"></span></br>
+
+      <label>longitude: </label>
+      <span id="longitude"></span></br>
+
+      <label>IP: </label>
+      <span id="ip"></span>
+    </div>
+
+    <div id="weatherInfo">
+      <h1>Het weer in <span id="locatie"></span></h1>
+      <label>Temperatuur: </label>
+      <span id="temperatuur"></span></br>
+
+      <label>Luchtvochtigheid: </label>
+      <span id="luchtvochtigheid"></span></br>
+
+      <label >Windsnelheid: </label>
+      <span id="windsnelheid"></span></br>
+
+      <label >Windrichting: </label>
+      <span id="windrichting"></span></br>
+
+      <label>Zonsopgang: </label>
+      <span id="zonsopgang"></span></br>
+
+      <label>Zonsondergang: </label>
+      <span id="zonsondergang"></span>
+    </div>
+
+    <!--voeg een land toe -->
+    <div id='toevoegen'>
+      <form id="POSTcountryForm">
+        <h1>Voeg een land toe:</h1>
+        <span>Landcode:</span>
+        <input type="text" id="voegcode" name="voegcode" maxlength="2"><br>
+        <span>iso3:</span>
+        <input type="text" id="voegiso3" name="voegiso3" maxlength="3"><br>
+        <span>Land:</span>
+        <input type="text" id="voegland" name="voegland"><br>
+        <span>Hoofdstad:</span>
+        <input type="text" id="voeghoofdstad" name="voeghoofdstad"><br>
+        <span>Regio:</span>
+        <input type="text" id="voegregio" name="voegregio"><br>
+        <span>Oppervlakte:</span>
+        <input type="number" id="voegopp" name="voegopp"><br>
+        <span>Inwoners:</span>
+        <input type="number" id="voeginw" name="voeginw"><br><br>
+        <input type="button" id="POST" value="Voeg toe">
+        <br>
+      </form>
+    </div>
+
+    <div id="inloggen">
+      <form id="loginform">
+        <h1>Inloggen: </h1>
+        <span>Gebruikersnaam:</span><br>
+        <input type="text" name="username" /><br>
+        <span>Wachtwoord:</span><br>
+        <input type="text" name="password" /><br>
+        <input type="button" value="login" id="login"/>
+      </form>
+    </div>
+
+    <div id="countryList" style="overflow-x:auto;">
+      <h1>Andere landen</h1>
+      <table id="landen">
+        <tr>
+          <th>Land</th>
+          <th>hoofdstad</th>
+          <th>regio</th>
+          <th>oppervlakte</th>
+          <th>inwoners</th>
+        </tr>
+        <!-- <tr>
+          <td id="tableLand"></td>
+          <td id="tableHoofdstad"></td>
+          <td id="tableRegio"></td>
+          <td id="tableOppervlakte"></td>
+          <td id="tableInwoners"></td>
+        </tr> -->
+      </table>
+    </div>
+
+<!--modal formulier voor wijzigen country -->
+<div id="modal">
+  <form id="PUTcountryForm">
+    Landcode:<br>
+    <input type="text" id="code" name="code" readonly><br>
+    Land:<br>
+    <input type="text" id="landtxt" name="land">
+    <br>
+    Hoofdstad:<br>
+    <input type="text" id="hoofdstadtxt" name="hoofdstad">
+    <br>
+    Regio:<br>
+    <input type="text" id="regiotxt" name="regio">
+    <br>
+    Oppervlakte:<br>
+    <input type="text" id="opptxt" name="oppervlakte">
+    <br>
+    Inwoners:<br>
+    <input type="text" id="inwonerstxt" name="inwoners">
+    <br><br>
+    <input type="button" id="submit" value="Submit">
+    <br><br>
+    <input type="button" id="close" value="Cancel">
+  </form>
+</div>
+  </div>
+  <script src="javascript/weatherApp.js"></script>
+</body>
+</html>
